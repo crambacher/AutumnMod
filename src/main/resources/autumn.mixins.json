@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.firebrandomega.autumn.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "AutumnMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

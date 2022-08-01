@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "autumn",
+  "version": "${version}",
+
+  "name": "Autumn Mod",
+  "description": "This mod is dedicated to my beautiful girlfriend!",
+  "authors": [
+    "FirebrandOmega"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT License",
+  "icon": "assets/autumn/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.firebrandomega.autumn.AutumnMod"
+    ],
+    "client": [
+      "net.firebrandomega.autumn.AutumnModClient"
+    ]
+  },
+  "mixins": [
+    "autumn.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

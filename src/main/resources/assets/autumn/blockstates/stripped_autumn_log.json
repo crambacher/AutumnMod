@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "autumn:block/stripped_autumn_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "autumn:block/stripped_autumn_log"
+    },
+    "axis=z": {
+      "model": "autumn:block/stripped_autumn_log",
+      "x": 90
+    }
+  }
+}

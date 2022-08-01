@@ -1,0 +1,21 @@
+{
+  "item.autumn.acorn": "Acorn",
+  "item.autumn.leaf": "Leaf",
+  "item.autumn.raccoon_spawn_egg": "Raccoon Spawn Egg",
+  "item.autumn.squirrel_spawn_egg": "Squirrel Spawn Egg",
+  "item.autumn.deer_spawn_egg": "Deer Spawn Egg",
+  "block.autumn.autumn_leaves_red": "Red Autumn Leaves",
+  "block.autumn.autumn_leaves_orange": "Orange Autumn Leaves",
+  "block.autumn.autumn_leaves_yellow": "Yellow Autumn Leaves",
+  "block.autumn.red_autumn_sapling": "Red Autumn Sapling",
+  "block.autumn.orange_autumn_sapling": "Orange Autumn Sapling",
+  "block.autumn.yellow_autumn_sapling": "Yellow Autumn Sapling",
+  "block.autumn.leafy_grass": "Leafy Grass",
+  "block.autumn.leaf_cover": "Leaf Cover",
+  "block.autumn.autumn_wood": "Autumn Wood",
+  "block.autumn.autumn_log": "Autumn Log",
+  "block.autumn.stripped_autumn_wood": "Stripped Autumn Wood",
+  "block.autumn.stripped_autumn_log": "Stripped Autumn Log",
+  "block.autumn.autumn_planks": "Autumn Planks",
+  "itemGroup.autumn.general": "Tutorial Mod"
+}

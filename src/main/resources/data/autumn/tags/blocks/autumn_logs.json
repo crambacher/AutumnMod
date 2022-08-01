@@ -1,0 +1,9 @@
+{
+  "replace": "false",
+  "values": [
+    "autumn:autumn_log",
+    "autumn:autumn_wood",
+    "autumn:stripped_autumn_log",
+    "autumn:stripped_autumn_wood"
+  ]
+}

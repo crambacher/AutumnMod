@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "autumn:blocks/autumn_leaves_orange"
+  }
+}

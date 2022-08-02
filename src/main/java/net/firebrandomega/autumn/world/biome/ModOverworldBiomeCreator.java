@@ -2,6 +2,7 @@ package net.firebrandomega.autumn.world.biome;
 
 import net.firebrandomega.autumn.registry.ModEntities;
 import net.firebrandomega.autumn.world.feature.ModConfiguredFeatures;
+import net.firebrandomega.autumn.world.feature.ModPlacedFeatures;
 import net.minecraft.client.sound.MusicType;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -42,7 +43,6 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
         DefaultBiomeFeatures.addDungeons(generationSettings);
         DefaultBiomeFeatures.addMineables(generationSettings);
         DefaultBiomeFeatures.addSprings(generationSettings);
-        DefaultBiomeFeatures.addFrozenTopLayer(generationSettings);
     }
     public static Biome createAutumnBiome(){
         SpawnSettings.Builder builder = new SpawnSettings.Builder();
@@ -64,7 +64,7 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
         builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.RED_AUTUMN_CHECKED);
         builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.ORANGE_AUTUMN_CHECKED);
         builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.YELLOW_AUTUMN_CHECKED);
-        builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_BIRCH_AND_OAK);
+        builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MOD_AUTUMN_BIRCH_AND_OAK);
         DefaultBiomeFeatures.addDefaultFlowers(builder2);
         DefaultBiomeFeatures.addDefaultMushrooms(builder2);
         DefaultBiomeFeatures.addDefaultVegetation(builder2);

@@ -4,23 +4,21 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.mixin.object.builder.SpawnRestrictionAccessor;
 import net.firebrandomega.autumn.registry.ModEntities;
+import net.firebrandomega.autumn.world.biome.ModOverworldBiomeCreator;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.SpawnRestriction;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.world.Heightmap;
-import net.minecraft.world.biome.BiomeKeys;
 
 public class ModEntitySpawn {
     public static void addEntitySpawn(){
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(
-                BiomeKeys.FOREST,BiomeKeys.PLAINS,BiomeKeys.BIRCH_FOREST),
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(ModOverworldBiomeCreator.AUTUMN_KEY),
                 SpawnGroup.CREATURE, ModEntities.RACCOON,
                 50,1,2);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.PLAINS),
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(ModOverworldBiomeCreator.AUTUMN_KEY),
                 SpawnGroup.CREATURE, ModEntities.SQUIRREL,
                 50, 1, 2);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(
-                        BiomeKeys.FOREST,BiomeKeys.PLAINS,BiomeKeys.BIRCH_FOREST),
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(ModOverworldBiomeCreator.AUTUMN_KEY),
                 SpawnGroup.CREATURE, ModEntities.DEER,
                 50, 2, 5);
 

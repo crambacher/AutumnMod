@@ -16,6 +16,7 @@ import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
+import net.minecraft.world.gen.feature.MiscPlacedFeatures;
 import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 import org.jetbrains.annotations.Nullable;
 
@@ -44,6 +45,10 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
         DefaultBiomeFeatures.addMineables(generationSettings);
         DefaultBiomeFeatures.addSprings(generationSettings);
     }
+
+    public static void addLeafPiles(GenerationSettings.Builder builder) {
+        builder.feature(GenerationStep.Feature.LOCAL_MODIFICATIONS, ModPlacedFeatures.LEAF_PILE);
+    }
     public static Biome createAutumnBiome(){
         SpawnSettings.Builder builder = new SpawnSettings.Builder();
         builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.DEER,8,2,5));
@@ -57,8 +62,9 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
 
         GenerationSettings.Builder builder2 = new GenerationSettings.Builder();
         ModOverworldBiomeCreator.addBasicFeatures(builder2);
-        DefaultBiomeFeatures.addMossyRocks(builder2);
-        DefaultBiomeFeatures.addLargeFerns(builder2);
+        addLeafPiles(builder2);
+        //DefaultBiomeFeatures.addMossyRocks(builder2);
+        //DefaultBiomeFeatures.addLargeFerns(builder2);
         DefaultBiomeFeatures.addDefaultOres(builder2);
         DefaultBiomeFeatures.addDefaultDisks(builder2);
         builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.RED_AUTUMN_CHECKED);

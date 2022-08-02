@@ -34,7 +34,6 @@ public class AutumnMod implements ModInitializer {
 		ModBlocks.registerFlammableBlocks();
 		ModBlocks.registerStrippables();
 
-
 		GeckoLib.initialize();
 
 		ModWorldGen.generateModWorldGen();

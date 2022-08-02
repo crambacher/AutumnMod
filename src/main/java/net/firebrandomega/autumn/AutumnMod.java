@@ -1,6 +1,7 @@
 package net.firebrandomega.autumn;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.firebrandomega.autumn.registry.ModBlocks;
 import net.firebrandomega.autumn.registry.ModEntities;
@@ -11,6 +12,8 @@ import net.firebrandomega.autumn.world.gen.ModWorldGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.BuiltinRegistries;
+import net.minecraft.world.biome.SpawnSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import software.bernie.geckolib3.GeckoLib;
@@ -33,6 +36,8 @@ public class AutumnMod implements ModInitializer {
 		ModParticles.registerParticles();
 		ModBlocks.registerFlammableBlocks();
 		ModBlocks.registerStrippables();
+
+		//Biome.
 
 		GeckoLib.initialize();
 

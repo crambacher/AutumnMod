@@ -1,14 +1,15 @@
 package net.firebrandomega.autumn.world.feature;
 
+import com.google.common.collect.ImmutableList;
 import net.firebrandomega.autumn.AutumnMod;
 import net.firebrandomega.autumn.registry.ModBlocks;
-import net.minecraft.block.Blocks;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.treedecorator.AlterGroundTreeDecorator;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
@@ -20,7 +21,9 @@ public class ModConfiguredFeatures {
                     new StraightTrunkPlacer(5,6,3),
                     BlockStateProvider.of(ModBlocks.AUTUMN_LEAVES_RED),
                     new BlobFoliagePlacer(ConstantIntProvider.create(2),ConstantIntProvider.create(0),4),
-                    new TwoLayersFeatureSize(1,0,2)).build());
+                    new TwoLayersFeatureSize(1,0,2))
+                    .decorators(ImmutableList.of(new AlterGroundTreeDecorator(
+                            BlockStateProvider.of(ModBlocks.RED_LEAFY_GRASS)))).build());
 
     public static final RegistryEntry<PlacedFeature> RED_AUTUMN_CHECKED =
             PlacedFeatures.register("red_autumn_checked", RED_AUTUMN_TREE,
@@ -41,7 +44,9 @@ public class ModConfiguredFeatures {
                     new StraightTrunkPlacer(5,6,3),
                     BlockStateProvider.of(ModBlocks.AUTUMN_LEAVES_ORANGE),
                     new BlobFoliagePlacer(ConstantIntProvider.create(2),ConstantIntProvider.create(0),4),
-                    new TwoLayersFeatureSize(1,0,2)).build());
+                    new TwoLayersFeatureSize(1,0,2))
+                    .decorators(ImmutableList.of(new AlterGroundTreeDecorator(
+                            BlockStateProvider.of(ModBlocks.RED_LEAFY_GRASS)))).build());
 
     public static final RegistryEntry<PlacedFeature> ORANGE_AUTUMN_CHECKED =
             PlacedFeatures.register("orange_autumn_checked", ORANGE_AUTUMN_TREE,
@@ -62,7 +67,9 @@ public class ModConfiguredFeatures {
                     new StraightTrunkPlacer(5,6,3),
                     BlockStateProvider.of(ModBlocks.AUTUMN_LEAVES_YELLOW),
                     new BlobFoliagePlacer(ConstantIntProvider.create(2),ConstantIntProvider.create(0),4),
-                    new TwoLayersFeatureSize(1,0,2)).build());
+                    new TwoLayersFeatureSize(1,0,2))
+                    .decorators(ImmutableList.of(new AlterGroundTreeDecorator(
+                            BlockStateProvider.of(ModBlocks.RED_LEAFY_GRASS)))).build());
 
     public static final RegistryEntry<PlacedFeature> YELLOW_AUTUMN_CHECKED =
             PlacedFeatures.register("yellow_autumn_checked", YELLOW_AUTUMN_TREE,
@@ -73,7 +80,7 @@ public class ModConfiguredFeatures {
                     new RandomFeatureConfig(List.of(new RandomFeatureEntry(YELLOW_AUTUMN_CHECKED,0.5f)),
                             YELLOW_AUTUMN_CHECKED));
 
-    public static final RegistryEntry<ConfiguredFeature<SingleStateFeatureConfig, ?>> LEAF_PILE = ConfiguredFeatures.register("leaf_pile", ModFeatures.LEAF_PILE, new SingleStateFeatureConfig(ModBlocks.LEAFY_GRASS.getDefaultState()));
+    public static final RegistryEntry<ConfiguredFeature<SingleStateFeatureConfig, ?>> LEAF_PILE = ConfiguredFeatures.register("leaf_pile", ModFeatures.LEAF_PILE, new SingleStateFeatureConfig(ModBlocks.RED_LEAFY_GRASS.getDefaultState()));
 
     public static void registerConfiguredFeatures(){
         System.out.println("Registering configured features for: "+ AutumnMod.MOD_ID);

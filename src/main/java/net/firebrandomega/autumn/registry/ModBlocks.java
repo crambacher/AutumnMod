@@ -16,7 +16,9 @@ public class ModBlocks {
     public static final Block AUTUMN_LEAVES_ORANGE = new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque());
     public static final Block AUTUMN_LEAVES_YELLOW = new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque());
 
-    public static final Block LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL));
+    public static final Block RED_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL));
+    public static final Block YELLOW_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL));
+    public static final Block ORANGE_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL));
     public static final Block LEAF_COVER = new Block(FabricBlockSettings.of(Material.CARPET));
 
     public static final Block AUTUMN_LOG = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG));
@@ -34,7 +36,9 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "autumn_leaves_orange"),AUTUMN_LEAVES_ORANGE);
         Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "autumn_leaves_yellow"),AUTUMN_LEAVES_YELLOW);
         Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "leaf_cover"),LEAF_COVER);
-        Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "leafy_grass"),LEAFY_GRASS);
+        Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "red_leafy_grass"), RED_LEAFY_GRASS);
+        Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "orange_leafy_grass"), ORANGE_LEAFY_GRASS);
+        Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "yellow_leafy_grass"), YELLOW_LEAFY_GRASS);
         Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "autumn_log"),AUTUMN_LOG);
         Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "autumn_wood"),AUTUMN_WOOD);
         Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "red_autumn_sapling"),RED_AUTUMN_SAPLING);

@@ -46,7 +46,7 @@ public class ModConfiguredFeatures {
                     new BlobFoliagePlacer(ConstantIntProvider.create(2),ConstantIntProvider.create(0),4),
                     new TwoLayersFeatureSize(1,0,2))
                     .decorators(ImmutableList.of(new AlterGroundTreeDecorator(
-                            BlockStateProvider.of(ModBlocks.RED_LEAFY_GRASS)))).build());
+                            BlockStateProvider.of(ModBlocks.ORANGE_LEAFY_GRASS)))).build());
 
     public static final RegistryEntry<PlacedFeature> ORANGE_AUTUMN_CHECKED =
             PlacedFeatures.register("orange_autumn_checked", ORANGE_AUTUMN_TREE,
@@ -69,7 +69,7 @@ public class ModConfiguredFeatures {
                     new BlobFoliagePlacer(ConstantIntProvider.create(2),ConstantIntProvider.create(0),4),
                     new TwoLayersFeatureSize(1,0,2))
                     .decorators(ImmutableList.of(new AlterGroundTreeDecorator(
-                            BlockStateProvider.of(ModBlocks.RED_LEAFY_GRASS)))).build());
+                            BlockStateProvider.of(ModBlocks.YELLOW_LEAFY_GRASS)))).build());
 
     public static final RegistryEntry<PlacedFeature> YELLOW_AUTUMN_CHECKED =
             PlacedFeatures.register("yellow_autumn_checked", YELLOW_AUTUMN_TREE,

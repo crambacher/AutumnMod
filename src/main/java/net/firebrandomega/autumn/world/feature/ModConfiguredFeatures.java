@@ -73,7 +73,7 @@ public class ModConfiguredFeatures {
                     new RandomFeatureConfig(List.of(new RandomFeatureEntry(YELLOW_AUTUMN_CHECKED,0.5f)),
                             YELLOW_AUTUMN_CHECKED));
 
-    public static final RegistryEntry<ConfiguredFeature<SingleStateFeatureConfig, ?>> LEAF_PILE = ConfiguredFeatures.register("forest_rock", Feature.FOREST_ROCK, new SingleStateFeatureConfig(ModBlocks.LEAFY_GRASS.getDefaultState()));
+    public static final RegistryEntry<ConfiguredFeature<SingleStateFeatureConfig, ?>> LEAF_PILE = ConfiguredFeatures.register("leaf_pile", ModFeatures.LEAF_PILE, new SingleStateFeatureConfig(ModBlocks.LEAFY_GRASS.getDefaultState()));
 
     public static void registerConfiguredFeatures(){
         System.out.println("Registering configured features for: "+ AutumnMod.MOD_ID);

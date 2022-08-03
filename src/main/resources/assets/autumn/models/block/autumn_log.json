@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end":"autumn:block/autumn_log_top",
-    "side": "autumn:block/autumn_log_side"
+    "end":"autumn:blocks/autumn_log_top",
+    "side": "autumn:blocks/autumn_log_side"
   }
 }

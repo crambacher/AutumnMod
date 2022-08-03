@@ -30,10 +30,10 @@ public class LeafPileFeature extends Feature<SingleStateFeatureConfig> {
         if (blockPos.getY() <= structureWorldAccess.getBottomY() + 3) {
             return false;
         }
-        for (int i = 0; i < 3; ++i) {
-            int j = random.nextInt(2);
-            int k = random.nextInt(2);
-            int l = random.nextInt(2);
+        for (int i = 0; i < 2; ++i) {
+            int j = random.nextInt(4);
+            int k = random.nextInt(1);
+            int l = random.nextInt(4);
             float f = (float)(j + k + l) * 0.333f + 0.5f;
             for (BlockPos blockPos2 : BlockPos.iterate(blockPos.add(-j, -k, -l), blockPos.add(j, k, l))) {
                 if (!(blockPos2.getSquaredDistance(blockPos) <= (double)(f * f))) continue;

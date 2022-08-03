@@ -63,8 +63,6 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
         GenerationSettings.Builder builder2 = new GenerationSettings.Builder();
         ModOverworldBiomeCreator.addBasicFeatures(builder2);
         addLeafPiles(builder2);
-        //DefaultBiomeFeatures.addMossyRocks(builder2);
-        //DefaultBiomeFeatures.addLargeFerns(builder2);
         DefaultBiomeFeatures.addDefaultOres(builder2);
         DefaultBiomeFeatures.addDefaultDisks(builder2);
         builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.RED_AUTUMN_CHECKED);
@@ -76,6 +74,6 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
         DefaultBiomeFeatures.addDefaultVegetation(builder2);
         DefaultBiomeFeatures.addSweetBerryBushes(builder2);
         MusicSound musicSound = MusicType.createIngameMusic(SoundEvents.MUSIC_OVERWORLD_JUNGLE_AND_FOREST);
-        return ModOverworldBiomeCreator.createBiome(Biome.Precipitation.RAIN,  0.3f, 0.8f, builder, builder2, musicSound);
+        return ModOverworldBiomeCreator.createBiome(Biome.Precipitation.RAIN,  0.7f, 0.8f, builder, builder2, musicSound);
     }
 }

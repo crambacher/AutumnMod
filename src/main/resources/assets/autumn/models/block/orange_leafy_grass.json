@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/leaves",
   "textures": {
-    "all": "autumn:blocks/leafy_grass"
+    "all": "autumn:blocks/orange_leafy_grass"
   }
 }

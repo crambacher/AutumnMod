@@ -62,7 +62,7 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
 
         GenerationSettings.Builder builder2 = new GenerationSettings.Builder();
         ModOverworldBiomeCreator.addBasicFeatures(builder2);
-        addLeafPiles(builder2);
+        //addLeafPiles(builder2);
         DefaultBiomeFeatures.addDefaultOres(builder2);
         DefaultBiomeFeatures.addDefaultDisks(builder2);
         builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.RED_AUTUMN_CHECKED);

@@ -45,24 +45,19 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
         DefaultBiomeFeatures.addMineables(generationSettings);
         DefaultBiomeFeatures.addSprings(generationSettings);
     }
-
-    public static void addLeafPiles(GenerationSettings.Builder builder) {
-        builder.feature(GenerationStep.Feature.LOCAL_MODIFICATIONS, ModPlacedFeatures.LEAF_PILE);
-    }
     public static Biome createAutumnBiome(){
         SpawnSettings.Builder builder = new SpawnSettings.Builder();
         builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.DEER,8,2,5));
-        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.SQUIRREL,4,1,2));
-        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.RACCOON,4,1,2));
-        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.RABBIT,3,1,2));
-        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.FOX, 3,1,2));
+        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.SQUIRREL,6,1,2));
+        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.RACCOON,6,1,2));
+        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.RABBIT,5,1,2));
+        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.FOX, 5,1,2));
 
         DefaultBiomeFeatures.addCaveMobs(builder);
         DefaultBiomeFeatures.addMonsters(builder, 100, 25, 100, false);
 
         GenerationSettings.Builder builder2 = new GenerationSettings.Builder();
         ModOverworldBiomeCreator.addBasicFeatures(builder2);
-        //addLeafPiles(builder2);
         DefaultBiomeFeatures.addDefaultOres(builder2);
         DefaultBiomeFeatures.addDefaultDisks(builder2);
         builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.RED_AUTUMN_CHECKED);

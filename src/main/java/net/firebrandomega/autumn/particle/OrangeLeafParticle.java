@@ -15,7 +15,7 @@ public class OrangeLeafParticle extends SpriteBillboardParticle {
         this.x = xD;
         this.y = yD;
         this.z = zD;
-        this.scale = 0.75F;
+        this.scale = 0.1F;
         this.maxAge = 200;
         this.setSpriteForAge(spriteSet);
 

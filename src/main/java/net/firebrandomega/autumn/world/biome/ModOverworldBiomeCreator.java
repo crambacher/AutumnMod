@@ -1,6 +1,9 @@
 package net.firebrandomega.autumn.world.biome;
 
+import net.fabricmc.fabric.api.biome.v1.BiomeModificationContext;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.firebrandomega.autumn.registry.ModEntities;
+import net.firebrandomega.autumn.registry.ModParticles;
 import net.firebrandomega.autumn.world.feature.ModConfiguredFeatures;
 import net.firebrandomega.autumn.world.feature.ModPlacedFeatures;
 import net.minecraft.client.sound.MusicType;
@@ -31,11 +34,15 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
     public static final RegistryKey<Biome> AUTUMN_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier("autumn", "autumn_biome"));
 
     public static Biome createBiome(Biome.Precipitation precipitation, float temperature, float downfall, int waterColor, int waterFogColor, SpawnSettings.Builder spawnSettings, GenerationSettings.Builder generationSettings, @Nullable MusicSound music) {
-        return new Biome.Builder().precipitation(precipitation).temperature(temperature).downfall(downfall).effects(new BiomeEffects.Builder().waterColor(waterColor).waterFogColor(waterFogColor).fogColor(12638463).skyColor(OverworldBiomeCreator.getSkyColor(temperature)).moodSound(BiomeMoodSound.CAVE).music(music).build()).spawnSettings(spawnSettings.build()).generationSettings(generationSettings.build()).build();
+        return new Biome.Builder().precipitation(precipitation).temperature(temperature).downfall(downfall).effects(new BiomeEffects.Builder().waterColor(waterColor).waterFogColor(waterFogColor).fogColor(12638463).particleConfig(new BiomeParticleConfig(ModParticles.ORANGE_LEAF_PARTICLE,0.00625f)).particleConfig(new BiomeParticleConfig(ModParticles.RED_LEAF_PARTICLE,0.00625f)).particleConfig(new BiomeParticleConfig(ModParticles.YELLOW_LEAF_PARTICLE,0.00625f)).skyColor(OverworldBiomeCreator.getSkyColor(temperature)).moodSound(BiomeMoodSound.CAVE).music(music).build()).spawnSettings(spawnSettings.build()).generationSettings(generationSettings.build()).build();
     }
 
     public static Biome createBiome(Biome.Precipitation precipitation, float temperature, float downfall, SpawnSettings.Builder spawnSettings, GenerationSettings.Builder generationSettings, @Nullable MusicSound music) {
         return ModOverworldBiomeCreator.createBiome(precipitation, temperature, downfall, 4159204, 329011, spawnSettings, generationSettings, music);
+    }
+
+    private static void addParticles(GenerationSettings.Builder generationSettings){
+
     }
 
     private static void addBasicFeatures(GenerationSettings.Builder generationSettings) {
@@ -44,6 +51,7 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
         DefaultBiomeFeatures.addDungeons(generationSettings);
         DefaultBiomeFeatures.addMineables(generationSettings);
         DefaultBiomeFeatures.addSprings(generationSettings);
+        DefaultBiomeFeatures.addDefaultGrass(generationSettings);
     }
     public static Biome createAutumnBiome(){
         SpawnSettings.Builder builder = new SpawnSettings.Builder();

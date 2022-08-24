@@ -8,6 +8,7 @@ import net.firebrandomega.autumn.entity.client.DeerRenderer;
 import net.firebrandomega.autumn.entity.client.PageRenderer;
 import net.firebrandomega.autumn.entity.client.RaccoonRenderer;
 import net.firebrandomega.autumn.entity.client.SquirrelRenderer;
+import net.firebrandomega.autumn.particle.AllLeafParticle;
 import net.firebrandomega.autumn.particle.OrangeLeafParticle;
 import net.firebrandomega.autumn.particle.RedLeafParticle;
 import net.firebrandomega.autumn.particle.YellowLeafParticle;
@@ -35,5 +36,6 @@ public class AutumnModClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ModParticles.RED_LEAF_PARTICLE, RedLeafParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.ORANGE_LEAF_PARTICLE, OrangeLeafParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.YELLOW_LEAF_PARTICLE, YellowLeafParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.ALL_LEAF_PARTICLE, AllLeafParticle.Factory::new);
     }
 }

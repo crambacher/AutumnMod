@@ -36,15 +36,12 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
     public static final RegistryKey<Biome> AUTUMN_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier("autumn", "autumn_biome"));
 
     public static Biome createBiome(Biome.Precipitation precipitation, float temperature, float downfall, int waterColor, int waterFogColor, SpawnSettings.Builder spawnSettings, GenerationSettings.Builder generationSettings, @Nullable MusicSound music, ParticleEffect particle) {
-        return new Biome.Builder().precipitation(precipitation).temperature(temperature).downfall(downfall).effects(new BiomeEffects.Builder().waterColor(waterColor).waterFogColor(waterFogColor).fogColor(12638463).particleConfig(new BiomeParticleConfig(particle,0.00625f)).particleConfig(new BiomeParticleConfig(ModParticles.RED_LEAF_PARTICLE,0.00625f)).particleConfig(new BiomeParticleConfig(ModParticles.YELLOW_LEAF_PARTICLE,0.00625f)).skyColor(OverworldBiomeCreator.getSkyColor(temperature)).moodSound(BiomeMoodSound.CAVE).music(music).build()).spawnSettings(spawnSettings.build()).generationSettings(generationSettings.build()).build();
+        return new Biome.Builder().precipitation(precipitation).temperature(temperature).downfall(downfall).effects(new BiomeEffects.Builder().waterColor(waterColor).waterFogColor(waterFogColor).fogColor(12638463)
+                .particleConfig(new BiomeParticleConfig(particle,0.00625f)).skyColor(OverworldBiomeCreator.getSkyColor(temperature)).moodSound(BiomeMoodSound.CAVE).music(music).build()).spawnSettings(spawnSettings.build()).generationSettings(generationSettings.build()).build();
     }
 
     public static Biome createBiome(Biome.Precipitation precipitation, float temperature, float downfall, SpawnSettings.Builder spawnSettings, GenerationSettings.Builder generationSettings, @Nullable MusicSound music, ParticleEffect particle) {
         return ModOverworldBiomeCreator.createBiome(precipitation, temperature, downfall, 4159204, 329011, spawnSettings, generationSettings, music, particle);
-    }
-
-    private static void addParticles(GenerationSettings.Builder generationSettings){
-
     }
 
     private static void addBasicFeatures(GenerationSettings.Builder generationSettings) {
@@ -79,6 +76,7 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
         DefaultBiomeFeatures.addDefaultVegetation(builder2);
         DefaultBiomeFeatures.addSweetBerryBushes(builder2);
         MusicSound musicSound = MusicType.createIngameMusic(SoundEvents.MUSIC_OVERWORLD_JUNGLE_AND_FOREST);
-        return ModOverworldBiomeCreator.createBiome(Biome.Precipitation.RAIN,  0.7f, 0.8f, builder, builder2, musicSound, ModParticles.ORANGE_LEAF_PARTICLE);
+        return ModOverworldBiomeCreator.createBiome(Biome.Precipitation.RAIN,  0.7f, 0.8f, builder,
+                builder2, musicSound, ModParticles.ALL_LEAF_PARTICLE);
     }
 }

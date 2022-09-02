@@ -2,10 +2,7 @@ package net.firebrandomega.autumn.registry;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.firebrandomega.autumn.AutumnMod;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -28,6 +25,8 @@ public class ModItems {
     public static final Item SQUIRREL_SPAWN_EGG = new SpawnEggItem(ModEntities.SQUIRREL,
             0x93999e, 0x696a6b,
             new FabricItemSettings().group(AutumnMod.ITEM_GROUP));
+
+    public static final Item AUTUMN_WINGS = new ElytraItem(new Item.Settings().group(AutumnMod.ITEM_GROUP));
 
 
     //Block Items
@@ -63,5 +62,6 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID, "raccoon_spawn_egg"), RACCOON_SPAWN_EGG);
         Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID, "deer_spawn_egg"), DEER_SPAWN_EGG);
         Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID, "squirrel_spawn_egg"), SQUIRREL_SPAWN_EGG);
+        Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID,"autumn_wings"), AUTUMN_WINGS);
     }
 }

@@ -7,7 +7,6 @@ import net.firebrandomega.autumn.entity.DeerEntity;
 import net.firebrandomega.autumn.entity.PageEntity;
 import net.firebrandomega.autumn.entity.RaccoonEntity;
 import net.firebrandomega.autumn.entity.SquirrelEntity;
-import net.firebrandomega.autumn.registry.variants.ModCatVariant;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;

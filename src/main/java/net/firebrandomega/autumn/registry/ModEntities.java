@@ -7,9 +7,11 @@ import net.firebrandomega.autumn.entity.DeerEntity;
 import net.firebrandomega.autumn.entity.PageEntity;
 import net.firebrandomega.autumn.entity.RaccoonEntity;
 import net.firebrandomega.autumn.entity.SquirrelEntity;
+import net.firebrandomega.autumn.registry.variants.ModCatVariant;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.passive.CatVariant;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -35,10 +37,17 @@ public class ModEntities {
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, PageEntity::new)
                     .dimensions(EntityDimensions.fixed(0.4f, 0.3f)).build());
 
+    //VARIANTS
+
     public static void registerAttributes(){
         FabricDefaultAttributeRegistry.register(ModEntities.RACCOON,RaccoonEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.DEER, DeerEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.SQUIRREL, SquirrelEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.PAGE, PageEntity.setAttributes());
+
+        //VARIANTS
+        Registry.register(Registry.CAT_VARIANT, "circle", new CatVariant(new Identifier("textures/entities/cat/circle.png")));
+        Registry.register(Registry.CAT_VARIANT, "loki", new CatVariant(new Identifier("textures/entities/cat/loki.png")));
+        Registry.register(Registry.CAT_VARIANT, "lulu", new CatVariant(new Identifier("textures/entities/cat/lulu.png")));
     }
 }

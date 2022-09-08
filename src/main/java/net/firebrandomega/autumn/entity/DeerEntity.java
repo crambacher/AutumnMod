@@ -32,6 +32,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
+import java.util.List;
 import java.util.function.Predicate;
 
 public class DeerEntity extends AnimalEntity implements Mount, IAnimatable {
@@ -260,6 +261,25 @@ public class DeerEntity extends AnimalEntity implements Mount, IAnimatable {
             }
         }
         super.tick();
+    }
+    static class GrowHornsGoal extends Goal {
+
+        private DeerEntity deer;
+
+        public GrowHornsGoal(DeerEntity deer){
+            this.deer = deer;
+        }
+        @Override
+        public boolean canStart() {
+            List<LivingEntity> list = this.deer.world.getEntitiesByClass(LivingEntity.class, this.deer.getBoundingBox(), livingEntity -> GROW_HORNS_TARGET_PREDICATE.test(this.deer, (LivingEntity)livingEntity));
+            return !list.isEmpty();
+        }
+
+        @Override
+        public void start(){
+            this.deer.inflateTicks = 1;
+            this.deer.deflateTicks = 0;
+        }
     }
 
 }

@@ -1,33 +1,26 @@
 package net.firebrandomega.autumn.entity.client.deer;
 
-import net.firebrandomega.autumn.AutumnMod;
 import net.firebrandomega.autumn.entity.DeerEntity;
-import net.minecraft.client.model.ModelPart;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.processor.IBone;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
-public class YoungDeerModel extends AnimatedGeoModel<DeerEntity> {
-
-private final ModelPart root;
-    public YoungDeerModel(ModelPart root){
-        this.root = root;
-    }
+public class DeerModel extends AnimatedGeoModel<DeerEntity> {
     @Override
     public Identifier getModelResource(DeerEntity object) {
-        return new Identifier(AutumnMod.MOD_ID, "geo/deer.geo.json");
+        return null;
     }
 
     @Override
     public Identifier getTextureResource(DeerEntity object) {
-        return new Identifier(AutumnMod.MOD_ID,"textures/entities/deer/deer.png");
+        return null;
     }
 
     @Override
     public Identifier getAnimationResource(DeerEntity animatable) {
-        return new Identifier(AutumnMod.MOD_ID, "animations/deer.animation.json");
+        return null;
     }
 
     @SuppressWarnings({"unchecked","rawtypes"})

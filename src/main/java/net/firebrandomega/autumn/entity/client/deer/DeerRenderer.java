@@ -4,13 +4,12 @@ import net.firebrandomega.autumn.AutumnMod;
 import net.firebrandomega.autumn.entity.DeerEntity;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
 public class DeerRenderer extends GeoEntityRenderer<DeerEntity> {
 
-    public DeerRenderer(EntityRendererFactory.Context ctx, AnimatedGeoModel<DeerEntity> modelProvider) {
-        super(ctx, modelProvider);
+    public DeerRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new DeerModel());
     }
 
     @Override

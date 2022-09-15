@@ -26,11 +26,11 @@ import net.minecraft.util.Identifier;
 public class AutumnWingsRenderer<T extends LivingEntity, M extends EntityModel<T>> extends ElytraFeatureRenderer {
 
     private static final Identifier SKIN = new Identifier("textures/entities/autumn_wings/autumn_wings.png");
-    private final ElytraEntityModel<T> elytra;
+    private final ElytraEntityModel<T> autumn_wings;
     public AutumnWingsRenderer(FeatureRendererContext context, EntityModelLoader loader) {
         super(context, loader);
 
-        this.elytra = new ElytraEntityModel(loader.getModelPart(EntityModelLayers.ELYTRA));
+        this.autumn_wings = new AutumnWingsModel(loader.getModelPart(EntityModelLayers.ELYTRA));
     }
     @Override
     public void render(MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, LivingEntity livingEntity, float f, float g, float h, float j, float k, float l) {
@@ -42,10 +42,10 @@ public class AutumnWingsRenderer<T extends LivingEntity, M extends EntityModel<T
         Identifier identifier = livingEntity instanceof AbstractClientPlayerEntity ? ((abstractClientPlayerEntity = (AbstractClientPlayerEntity)livingEntity).canRenderElytraTexture() && abstractClientPlayerEntity.getElytraTexture() != null ? abstractClientPlayerEntity.getElytraTexture() : (abstractClientPlayerEntity.canRenderCapeTexture() && abstractClientPlayerEntity.getCapeTexture() != null && abstractClientPlayerEntity.isPartVisible(PlayerModelPart.CAPE) ? abstractClientPlayerEntity.getCapeTexture() : SKIN)) : SKIN;
         matrixStack.push();
         matrixStack.translate(0.0, 0.0, 0.125);
-        ((EntityModel)this.getContextModel()).copyStateTo(this.elytra);
-        this.elytra.setAngles((T) livingEntity, f, g, j, k, l);
+        ((EntityModel)this.getContextModel()).copyStateTo(this.autumn_wings);
+        this.autumn_wings.setAngles((T) livingEntity, f, g, j, k, l);
         VertexConsumer vertexConsumer = ItemRenderer.getArmorGlintConsumer(vertexConsumerProvider, RenderLayer.getArmorCutoutNoCull(identifier), false, itemStack.hasGlint());
-        this.elytra.render(matrixStack, vertexConsumer, i, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
+        this.autumn_wings.render(matrixStack, vertexConsumer, i, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
         matrixStack.pop();
     }
 }

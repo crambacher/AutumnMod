@@ -1,4 +1,4 @@
-package net.firebrandomega.autumn.entity.client.deer;
+package net.firebrandomega.autumn.entity.client;
 
 import net.firebrandomega.autumn.entity.DeerEntity;
 import net.minecraft.util.Identifier;

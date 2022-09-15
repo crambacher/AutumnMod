@@ -1,4 +1,4 @@
-package net.firebrandomega.autumn.entity.client.deer;
+package net.firebrandomega.autumn.entity.client;
 
 import net.firebrandomega.autumn.AutumnMod;
 import net.firebrandomega.autumn.entity.DeerEntity;
@@ -21,4 +21,5 @@ public class DeerRenderer extends GeoEntityRenderer<DeerEntity> {
     public Identifier getTextureResource(DeerEntity instance){
         return new Identifier(AutumnMod.MOD_ID,"textures/entities/deer/deer.png");
     }
+
 }

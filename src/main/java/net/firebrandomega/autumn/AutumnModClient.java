@@ -4,7 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.firebrandomega.autumn.entity.client.deer.DeerRenderer;
+import net.firebrandomega.autumn.entity.client.DeerRenderer;
 import net.firebrandomega.autumn.entity.client.PageRenderer;
 import net.firebrandomega.autumn.entity.client.RaccoonRenderer;
 import net.firebrandomega.autumn.entity.client.SquirrelRenderer;

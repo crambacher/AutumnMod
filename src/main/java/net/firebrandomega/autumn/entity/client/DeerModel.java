@@ -1,5 +1,6 @@
 package net.firebrandomega.autumn.entity.client;
 
+import net.firebrandomega.autumn.AutumnMod;
 import net.firebrandomega.autumn.entity.DeerEntity;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
@@ -10,17 +11,17 @@ import software.bernie.geckolib3.model.provider.data.EntityModelData;
 public class DeerModel extends AnimatedGeoModel<DeerEntity> {
     @Override
     public Identifier getModelResource(DeerEntity object) {
-        return null;
+        return new Identifier(AutumnMod.MOD_ID, "geo/deer.geo.json");
     }
 
     @Override
     public Identifier getTextureResource(DeerEntity object) {
-        return null;
+        return new Identifier(AutumnMod.MOD_ID, "textures/entities/deer/deer.json");
     }
 
     @Override
     public Identifier getAnimationResource(DeerEntity animatable) {
-        return null;
+        return new Identifier(AutumnMod.MOD_ID, "animations/deer.animation.json");
     }
 
     @SuppressWarnings({"unchecked","rawtypes"})

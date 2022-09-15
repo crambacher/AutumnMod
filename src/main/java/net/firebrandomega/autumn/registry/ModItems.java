@@ -33,7 +33,9 @@ public class ModItems {
     public static final BlockItem AUTUMN_LEAVES_RED = new BlockItem(ModBlocks.AUTUMN_LEAVES_RED, new Item.Settings().group(AutumnMod.ITEM_GROUP));
     public static final BlockItem AUTUMN_LEAVES_ORANGE = new BlockItem(ModBlocks.AUTUMN_LEAVES_ORANGE, new Item.Settings().group(AutumnMod.ITEM_GROUP));
     public static final BlockItem AUTUMN_LEAVES_YELLOW = new BlockItem(ModBlocks.AUTUMN_LEAVES_YELLOW, new Item.Settings().group(AutumnMod.ITEM_GROUP));
-
+    public static final BlockItem RED_LEAFY_GRASS = new BlockItem(ModBlocks.RED_LEAFY_GRASS, new Item.Settings().group(AutumnMod.ITEM_GROUP));
+    public static final BlockItem ORANGE_LEAFY_GRASS = new BlockItem(ModBlocks.ORANGE_LEAFY_GRASS, new Item.Settings().group(AutumnMod.ITEM_GROUP));
+    public static final BlockItem YELLOW_LEAFY_GRASS = new BlockItem(ModBlocks.YELLOW_LEAFY_GRASS, new Item.Settings().group(AutumnMod.ITEM_GROUP));
     public static final BlockItem LEAF_COVER = new BlockItem(ModBlocks.LEAF_COVER, new Item.Settings().group(AutumnMod.ITEM_GROUP));
     public static final BlockItem AUTUMN_WOOD = new BlockItem(ModBlocks.AUTUMN_WOOD, new Item.Settings().group(AutumnMod.ITEM_GROUP));
     public static final BlockItem AUTUMN_LOG = new BlockItem(ModBlocks.AUTUMN_LOG, new Item.Settings().group(AutumnMod.ITEM_GROUP));
@@ -48,6 +50,9 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID, "autumn_leaves_red"), AUTUMN_LEAVES_RED);
         Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID, "autumn_leaves_orange"), AUTUMN_LEAVES_ORANGE);
         Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID, "autumn_leaves_yellow"), AUTUMN_LEAVES_YELLOW);
+        Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID, "red_leafy_grass"), RED_LEAFY_GRASS);
+        Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID, "orange_leafy_grass"), ORANGE_LEAFY_GRASS);
+        Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID, "yellow_leafy_grass"), YELLOW_LEAFY_GRASS);
         Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID, "acorn"), ACORN);
         Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID, "leaf"), LEAF);
         Registry.register(Registry.ITEM, new Identifier(AutumnMod.MOD_ID, "leaf_cover"), LEAF_COVER);

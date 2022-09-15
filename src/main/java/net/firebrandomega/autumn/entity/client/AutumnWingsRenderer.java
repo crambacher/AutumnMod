@@ -25,7 +25,7 @@ import net.minecraft.util.Identifier;
 @Environment(value = EnvType.CLIENT)
 public class AutumnWingsRenderer<T extends LivingEntity, M extends EntityModel<T>> extends ElytraFeatureRenderer {
 
-    private static final Identifier SKIN = new Identifier("textures/entity/elytra.png");
+    private static final Identifier SKIN = new Identifier("textures/entities/autumn_wings/autumn_wings.png");
     private final ElytraEntityModel<T> elytra;
     public AutumnWingsRenderer(FeatureRendererContext context, EntityModelLoader loader) {
         super(context, loader);
@@ -35,7 +35,7 @@ public class AutumnWingsRenderer<T extends LivingEntity, M extends EntityModel<T
     @Override
     public void render(MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, LivingEntity livingEntity, float f, float g, float h, float j, float k, float l) {
         AbstractClientPlayerEntity abstractClientPlayerEntity;
-        ItemStack itemStack = ((LivingEntity)livingEntity).getEquippedStack(EquipmentSlot.CHEST);
+        ItemStack itemStack = livingEntity.getEquippedStack(EquipmentSlot.CHEST);
         if (!itemStack.isOf(Items.ELYTRA)) {
             return;
         }

@@ -2,7 +2,6 @@ package net.firebrandomega.autumn.entity.client;
 
 import net.firebrandomega.autumn.AutumnMod;
 import net.firebrandomega.autumn.entity.DeerEntity;
-import net.firebrandomega.autumn.entity.RaccoonEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;

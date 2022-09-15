@@ -36,8 +36,6 @@ public class ModEntities {
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, PageEntity::new)
                     .dimensions(EntityDimensions.fixed(0.4f, 0.3f)).build());
 
-    //VARIANTS
-
     public static void registerAttributes(){
         FabricDefaultAttributeRegistry.register(ModEntities.RACCOON,RaccoonEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.DEER, DeerEntity.setAttributes());
@@ -45,8 +43,10 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(ModEntities.PAGE, PageEntity.setAttributes());
 
         //VARIANTS
+        /*
         Registry.register(Registry.CAT_VARIANT, "circle", new CatVariant(new Identifier("textures/entities/cat/circle.png")));
         Registry.register(Registry.CAT_VARIANT, "loki", new CatVariant(new Identifier("textures/entities/cat/loki.png")));
         Registry.register(Registry.CAT_VARIANT, "lulu", new CatVariant(new Identifier("textures/entities/cat/lulu.png")));
+         */
     }
 }

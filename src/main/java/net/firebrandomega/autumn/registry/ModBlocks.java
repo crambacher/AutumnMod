@@ -8,28 +8,29 @@ import net.firebrandomega.autumn.world.feature.tree.OrangeAutumnSaplingGenerator
 import net.firebrandomega.autumn.world.feature.tree.RedAutumnSaplingGenerator;
 import net.firebrandomega.autumn.world.feature.tree.YellowAutumnSaplingGenerator;
 import net.minecraft.block.*;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
-    public static final Block AUTUMN_LEAVES_RED = new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque());
-    public static final Block AUTUMN_LEAVES_ORANGE = new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque());
-    public static final Block AUTUMN_LEAVES_YELLOW = new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque());
+    public static final Block AUTUMN_LEAVES_RED = new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque().sounds(BlockSoundGroup.AZALEA_LEAVES));
+    public static final Block AUTUMN_LEAVES_ORANGE = new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque().sounds(BlockSoundGroup.AZALEA_LEAVES));
+    public static final Block AUTUMN_LEAVES_YELLOW = new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque().sounds(BlockSoundGroup.AZALEA_LEAVES));
 
-    public static final Block RED_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL));
-    public static final Block YELLOW_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL));
-    public static final Block ORANGE_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL));
-    public static final Block LEAF_COVER = new Block(FabricBlockSettings.of(Material.CARPET));
+    public static final Block RED_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRASS));
+    public static final Block YELLOW_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRASS));
+    public static final Block ORANGE_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRASS));
+    public static final Block LEAF_COVER = new Block(FabricBlockSettings.of(Material.CARPET).sounds(BlockSoundGroup.GRASS));
 
-    public static final Block AUTUMN_LOG = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG));
-    public static final Block AUTUMN_WOOD = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD));
-    public static final Block STRIPPED_AUTUMN_LOG = new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG));
-    public static final Block STRIPPED_AUTUMN_WOOD = new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD));
-    public static final Block AUTUMN_PLANKS = new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS));
+    public static final Block AUTUMN_LOG = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).sounds(BlockSoundGroup.WOOD));
+    public static final Block AUTUMN_WOOD = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).sounds(BlockSoundGroup.WOOD));
+    public static final Block STRIPPED_AUTUMN_LOG = new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).sounds(BlockSoundGroup.WOOD));
+    public static final Block STRIPPED_AUTUMN_WOOD = new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).sounds(BlockSoundGroup.WOOD));
+    public static final Block AUTUMN_PLANKS = new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.WOOD));
 
-    public static final Block RED_AUTUMN_SAPLING = new SaplingBlock(new RedAutumnSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING));
-    public static final Block ORANGE_AUTUMN_SAPLING = new SaplingBlock(new OrangeAutumnSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING));
-    public static final Block YELLOW_AUTUMN_SAPLING = new SaplingBlock(new YellowAutumnSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING));
+    public static final Block RED_AUTUMN_SAPLING = new SaplingBlock(new RedAutumnSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).sounds(BlockSoundGroup.AZALEA_LEAVES));
+    public static final Block ORANGE_AUTUMN_SAPLING = new SaplingBlock(new OrangeAutumnSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).sounds(BlockSoundGroup.AZALEA_LEAVES));
+    public static final Block YELLOW_AUTUMN_SAPLING = new SaplingBlock(new YellowAutumnSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).sounds(BlockSoundGroup.AZALEA_LEAVES));
 
     public static void registerBlocks(){
         Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "autumn_leaves_red"),AUTUMN_LEAVES_RED);

@@ -3,7 +3,6 @@ package net.firebrandomega.autumn.item;
 import net.firebrandomega.autumn.registry.ModItems;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.sound.SoundEvent;
@@ -33,7 +32,7 @@ public class AutumnWingsItem extends ElytraItem {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        EquipmentSlot equipmentSlot = MobEntity.getPreferredEquipmentSlot(itemStack);
+        EquipmentSlot equipmentSlot = EquipmentSlot.CHEST;
         ItemStack itemStack2 = user.getEquippedStack(equipmentSlot);
         if (itemStack2.isEmpty()) {
             user.equipStack(equipmentSlot, itemStack.copy());

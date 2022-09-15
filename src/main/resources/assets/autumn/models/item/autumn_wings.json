@@ -1,6 +1,14 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "autumn:items/autumn_wings"
-  }
+    "layer0": "item/autumn_wings"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "broken": 1
+      },
+      "model": "item/autumn_wings"
+    }
+  ]
 }

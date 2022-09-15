@@ -1,5 +1,7 @@
 package net.firebrandomega.autumn.entity.client;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.VertexConsumer;
@@ -11,8 +13,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.Vec3d;
 
+@Environment(value= EnvType.CLIENT)
 public class AutumnWingsModel extends ElytraEntityModel {
-
 
     private final ModelPart rightWing;
     private final ModelPart leftWing;

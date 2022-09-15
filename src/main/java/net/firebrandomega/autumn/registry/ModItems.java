@@ -2,8 +2,10 @@ package net.firebrandomega.autumn.registry;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.firebrandomega.autumn.AutumnMod;
+import net.firebrandomega.autumn.item.AutumnWingsItem;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
@@ -26,7 +28,7 @@ public class ModItems {
             0x93999e, 0x696a6b,
             new FabricItemSettings().group(AutumnMod.ITEM_GROUP));
 
-    public static final Item AUTUMN_WINGS = new ElytraItem(new Item.Settings().group(AutumnMod.ITEM_GROUP));
+    public static final Item AUTUMN_WINGS = new AutumnWingsItem(new Item.Settings().group(AutumnMod.ITEM_GROUP).maxDamage(1000).rarity(Rarity.EPIC));
 
 
     //Block Items

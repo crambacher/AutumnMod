@@ -6,7 +6,6 @@ import net.firebrandomega.autumn.registry.ModBlocks;
 import net.firebrandomega.autumn.registry.ModEntities;
 import net.firebrandomega.autumn.registry.ModItems;
 import net.firebrandomega.autumn.registry.ModParticles;
-import net.firebrandomega.autumn.world.feature.ModConfiguredFeatures;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -24,7 +23,6 @@ public class AutumnMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModConfiguredFeatures.registerConfiguredFeatures();
 
 		ModBlocks.registerBlocks();
 		ModItems.registerItems();

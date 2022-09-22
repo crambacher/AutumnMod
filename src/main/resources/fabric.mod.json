@@ -14,7 +14,7 @@
   },
 
   "license": "MIT License",
-  "icon": "assets/autumn/icon.png",
+  "icon": "assets/autumn/AutumnModLogo.png",
 
   "environment": "*",
   "entrypoints": {

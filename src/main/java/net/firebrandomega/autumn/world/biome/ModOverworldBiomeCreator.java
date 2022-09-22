@@ -66,6 +66,7 @@ public class ModOverworldBiomeCreator extends OverworldBiomeCreator {
         builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.ORANGE_AUTUMN_CHECKED);
         builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.YELLOW_AUTUMN_CHECKED);
         builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MOD_AUTUMN_BIRCH_AND_OAK);
+        builder2.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LEAF_PILE);
         DefaultBiomeFeatures.addDefaultFlowers(builder2);
         DefaultBiomeFeatures.addDefaultMushrooms(builder2);
         DefaultBiomeFeatures.addDefaultVegetation(builder2);

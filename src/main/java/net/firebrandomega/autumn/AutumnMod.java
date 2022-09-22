@@ -6,7 +6,6 @@ import net.firebrandomega.autumn.registry.ModBlocks;
 import net.firebrandomega.autumn.registry.ModEntities;
 import net.firebrandomega.autumn.registry.ModItems;
 import net.firebrandomega.autumn.registry.ModParticles;
-import net.firebrandomega.autumn.world.biome.ModOverworldBiomeCreator;
 import net.firebrandomega.autumn.world.feature.ModConfiguredFeatures;
 import net.firebrandomega.autumn.world.gen.ModWorldGen;
 import net.minecraft.item.ItemGroup;

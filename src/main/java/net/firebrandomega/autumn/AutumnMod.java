@@ -8,6 +8,7 @@ import net.firebrandomega.autumn.registry.ModItems;
 import net.firebrandomega.autumn.registry.ModParticles;
 import net.firebrandomega.autumn.world.feature.ModConfiguredFeatures;
 import net.firebrandomega.autumn.world.feature.ModPlacedFeatures;
+import net.firebrandomega.autumn.world.gen.ModWorldGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -35,6 +36,7 @@ public class AutumnMod implements ModInitializer {
 		ModBlocks.registerFlammableBlocks();
 		ModBlocks.registerStrippables();
 
+		ModWorldGen.generateModWorldGen();
 		GeckoLib.initialize();
 	}
 }

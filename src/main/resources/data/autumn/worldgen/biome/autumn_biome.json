@@ -139,5 +139,6 @@
         "maxCount": 2
       }
     ]
-  }
+  },
+  "temperature": 0.7
 }

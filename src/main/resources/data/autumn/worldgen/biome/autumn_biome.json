@@ -87,8 +87,8 @@
     ],
     [
       "autumn:red_autumn_tree",
-      "autumn:orange_autumn_placed",
-      "autumn:yellow_autumn_placed",
+      "autumn:orange_autumn_tree",
+      "autumn:yellow_autumn_tree",
       "minecraft:glow_lichen",
       "minecraft:forest_flowers",
       "minecraft:autumn_birch_and_oak",
@@ -97,8 +97,7 @@
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
-      "minecraft:patch_pumpkin",
-      "autumn:leaf_pile"
+      "minecraft:patch_pumpkin"
     ],
     [
       "minecraft:freeze_top_layer"

@@ -6,6 +6,7 @@ import net.firebrandomega.autumn.registry.ModBlocks;
 import net.firebrandomega.autumn.registry.ModEntities;
 import net.firebrandomega.autumn.registry.ModItems;
 import net.firebrandomega.autumn.registry.ModParticles;
+import net.firebrandomega.autumn.world.biome.ModOverworldBiomeCreator;
 import net.firebrandomega.autumn.world.feature.ModConfiguredFeatures;
 import net.firebrandomega.autumn.world.feature.ModPlacedFeatures;
 import net.firebrandomega.autumn.world.gen.ModWorldGen;
@@ -36,6 +37,7 @@ public class AutumnMod implements ModInitializer {
 		ModBlocks.registerFlammableBlocks();
 		ModBlocks.registerStrippables();
 
+		ModOverworldBiomeCreator.registerBiomes();
 		ModWorldGen.generateModWorldGen();
 		GeckoLib.initialize();
 	}

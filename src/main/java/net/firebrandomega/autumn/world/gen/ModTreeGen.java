@@ -19,10 +19,7 @@ public class ModTreeGen {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(
                         ModOverworldBiomeCreator.AUTUMN_KEY),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.YELLOW_AUTUMN_PLACED.getKey().get());
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(
-                        ModOverworldBiomeCreator.AUTUMN_KEY),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MOD_AUTUMN_BIRCH_AND_OAK.getKey().get());
-    }
+        }
 
     //(Predicate<BiomeSelectionContext>) BiomeKeys.PLAINS
 }

@@ -3,14 +3,12 @@ package net.firebrandomega.autumn.world.feature;
 import com.google.common.collect.ImmutableList;
 import net.firebrandomega.autumn.AutumnMod;
 import net.firebrandomega.autumn.registry.ModBlocks;
-import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.treedecorator.AlterGroundTreeDecorator;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
@@ -79,7 +77,7 @@ public class ModConfiguredFeatures {
                     new RandomFeatureConfig(List.of(new RandomFeatureEntry(YELLOW_AUTUMN_CHECKED,0.5f)),
                             YELLOW_AUTUMN_CHECKED));
 
-    public static final RegistryEntry<ConfiguredFeature<BlockPileFeatureConfig, ?>> LEAF_PILE = ConfiguredFeatures.register("leaf_pile", Feature.BLOCK_PILE, new BlockPileFeatureConfig(new WeightedBlockStateProvider(DataPool.builder().add(ModBlocks.RED_LEAFY_GRASS.getDefaultState(), 7).add(ModBlocks.ORANGE_LEAFY_GRASS.getDefaultState(), 7).add(ModBlocks.YELLOW_LEAFY_GRASS.getDefaultState(), 7))));
+    public static final RegistryEntry<ConfiguredFeature<BlockPileFeatureConfig, ?>> LEAF_PILE = ConfiguredFeatures.register("leaf_pile", Feature.BLOCK_PILE, new BlockPileFeatureConfig(BlockStateProvider.of(ModBlocks.LEAF_COVER)));
     public static void registerConfiguredFeatures(){
         System.out.println("Registering configured features for: "+ AutumnMod.MOD_ID);
     }

@@ -24,7 +24,10 @@ public class LeafPileFeature extends Feature<SingleStateFeatureConfig> {
         StructureWorldAccess structureWorldAccess = context.getWorld();
         Random random = context.getRandom();
         SingleStateFeatureConfig singleStateFeatureConfig = context.getConfig();
-        while (blockPos.getY() > structureWorldAccess.getBottomY() + 3 && (structureWorldAccess.isAir(blockPos.down()) || !ForestRockFeature.isSoil(blockState = structureWorldAccess.getBlockState(blockPos.down())) && !ForestRockFeature.isStone(blockState))) {
+        while (blockPos.getY() > structureWorldAccess.getBottomY() + 3 &&
+                (structureWorldAccess.isAir(blockPos.down()) ||
+                        !ForestRockFeature.isSoil(blockState = structureWorldAccess.getBlockState(blockPos.down())) &&
+                                !ForestRockFeature.isStone(blockState))) {
             blockPos = blockPos.down();
         }
         if (blockPos.getY() <= structureWorldAccess.getBottomY() + 3) {
@@ -39,7 +42,8 @@ public class LeafPileFeature extends Feature<SingleStateFeatureConfig> {
                 if (!(blockPos2.getSquaredDistance(blockPos) <= (double)(f * f))) continue;
                 structureWorldAccess.setBlockState(blockPos2, singleStateFeatureConfig.state, Block.NO_REDRAW);
             }
-            blockPos = blockPos.add(-1 + random.nextInt(2), -random.nextInt(2), -1 + random.nextInt(2));
+            blockPos = blockPos.add(-1 + random.nextInt(2),
+                    -random.nextInt(2), -1 + random.nextInt(2));
         }
         return true;
     }

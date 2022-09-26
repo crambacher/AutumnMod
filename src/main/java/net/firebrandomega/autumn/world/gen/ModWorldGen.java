@@ -4,7 +4,8 @@ import net.firebrandomega.autumn.world.feature.ModConfiguredFeatures;
 
 public class ModWorldGen {
     public static void generateModWorldGen(){
-        ModTreeGen.generateTrees();
+        ModFeatureGen.generateTrees();
+        ModFeatureGen.generateOtherFeatures();
         ModEntitySpawn.addEntitySpawn();
         ModConfiguredFeatures.registerConfiguredFeatures();
     }

@@ -6,8 +6,8 @@ import net.firebrandomega.autumn.world.biome.ModOverworldBiomeCreator;
 import net.firebrandomega.autumn.world.feature.ModPlacedFeatures;
 import net.minecraft.world.gen.GenerationStep;
 
-public class ModTreeGen {
-    public static void generateTrees(){
+public class ModFeatureGen {
+    public static void generateTrees() {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(
                         ModOverworldBiomeCreator.AUTUMN_KEY),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.RED_AUTUMN_PLACED.getKey().get());
@@ -19,7 +19,13 @@ public class ModTreeGen {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(
                         ModOverworldBiomeCreator.AUTUMN_KEY),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.YELLOW_AUTUMN_PLACED.getKey().get());
-        }
+    }
+
+    public static void generateOtherFeatures(){
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(
+                        ModOverworldBiomeCreator.AUTUMN_KEY),
+                GenerationStep.Feature.LOCAL_MODIFICATIONS, ModPlacedFeatures.LEAF_PILE_PLACED.getKey().get());
+    }
 
     //(Predicate<BiomeSelectionContext>) BiomeKeys.PLAINS
 }

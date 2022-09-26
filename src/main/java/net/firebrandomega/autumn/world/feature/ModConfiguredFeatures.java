@@ -78,6 +78,10 @@ public class ModConfiguredFeatures {
                             YELLOW_AUTUMN_CHECKED));
 
     public static final RegistryEntry<ConfiguredFeature<BlockPileFeatureConfig, ?>> LEAF_PILE = ConfiguredFeatures.register("leaf_pile", Feature.BLOCK_PILE, new BlockPileFeatureConfig(BlockStateProvider.of(ModBlocks.LEAF_COVER)));
+    public static final RegistryEntry<PlacedFeature> LEAF_PILE_CHECKED = PlacedFeatures.register("leaf_pile_checked", LEAF_PILE,
+            PlacedFeatures.wouldSurvive(ModBlocks.LEAF_COVER));
+    public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig,?>> LEAF_PILE_SPAWN = ConfiguredFeatures.register("leaf_pile_spawn", Feature.RANDOM_SELECTOR,
+            new RandomFeatureConfig(List.of(new RandomFeatureEntry(LEAF_PILE_CHECKED,0.5f)),LEAF_PILE_CHECKED));
     public static void registerConfiguredFeatures(){
         System.out.println("Registering configured features for: "+ AutumnMod.MOD_ID);
     }

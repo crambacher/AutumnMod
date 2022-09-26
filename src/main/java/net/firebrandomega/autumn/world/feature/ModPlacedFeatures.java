@@ -30,7 +30,12 @@ public class ModPlacedFeatures {
 
     public static final RegistryEntry<PlacedFeature> YELLOW_AUTUMN_PLACED = PlacedFeatures.register(
             "yellow_autumn_placed", ModConfiguredFeatures.YELLOW_AUTUMN_SPAWN, modifiers(
-                    PlacedFeatures.createCountExtraModifier(4, 0.1f, 2)
+                    PlacedFeatures.createCountExtraModifier(1, 0.5f, 2)
+            ));
+
+    public static final RegistryEntry<PlacedFeature> LEAF_PILE_PLACED = PlacedFeatures.register(
+            "leaf_pile_placed", ModConfiguredFeatures.LEAF_PILE_SPAWN, modifiers(
+                    PlacedFeatures.createCountExtraModifier(1,0.5f,2)
             ));
 
 }

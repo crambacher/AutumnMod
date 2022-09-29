@@ -43,11 +43,11 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(ModEntities.SQUIRREL, SquirrelEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.PAGE, PageEntity.setAttributes());
         //FabricDefaultAttributeRegistry.register(ModEntities.);
+    }
 
-        //VARIANTS
+    public static void registerVariants(){
         Registry.register(Registry.CAT_VARIANT, "circle", new CatVariant(new Identifier("textures/entities/cat/circle.png")));
         Registry.register(Registry.CAT_VARIANT, "loki", new CatVariant(new Identifier("textures/entities/cat/loki.png")));
         Registry.register(Registry.CAT_VARIANT, "lulu", new CatVariant(new Identifier("textures/entities/cat/lulu.png")));
-
     }
 }

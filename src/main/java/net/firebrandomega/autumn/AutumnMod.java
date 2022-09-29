@@ -33,6 +33,7 @@ public class AutumnMod implements ModInitializer {
 		ModBlocks.registerBlocks();
 		ModItems.registerItems();
 		ModEntities.registerAttributes();
+		ModEntities.registerVariants();
 		ModParticles.registerParticles();
 		ModBlocks.registerFlammableBlocks();
 		ModBlocks.registerStrippables();

@@ -35,18 +35,19 @@ public class ModEntities {
             new Identifier(AutumnMod.MOD_ID,"page"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, PageEntity::new)
                     .dimensions(EntityDimensions.fixed(0.4f, 0.3f)).build());
+    //public static final EntityType<AutumnWings>
 
     public static void registerAttributes(){
-        FabricDefaultAttributeRegistry.register(ModEntities.RACCOON,RaccoonEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.RACCOON, RaccoonEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.DEER, DeerEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.SQUIRREL, SquirrelEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.PAGE, PageEntity.setAttributes());
+        //FabricDefaultAttributeRegistry.register(ModEntities.);
 
         //VARIANTS
-        /*
         Registry.register(Registry.CAT_VARIANT, "circle", new CatVariant(new Identifier("textures/entities/cat/circle.png")));
         Registry.register(Registry.CAT_VARIANT, "loki", new CatVariant(new Identifier("textures/entities/cat/loki.png")));
         Registry.register(Registry.CAT_VARIANT, "lulu", new CatVariant(new Identifier("textures/entities/cat/lulu.png")));
-         */
+
     }
 }

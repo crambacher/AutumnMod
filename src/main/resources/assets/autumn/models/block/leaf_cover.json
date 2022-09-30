@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "autumn:block/leaf_cover"
+    "all": "autumn:blocks/leaf_cover"
   }
 }

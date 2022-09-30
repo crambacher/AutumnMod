@@ -1,7 +1,5 @@
 {
   "variants": {
-    "": {
-      "model": "minecraft:block/leaf_cover"
-    }
+    "": { "model": "autumn:block/leaf_cover" }
   }
 }

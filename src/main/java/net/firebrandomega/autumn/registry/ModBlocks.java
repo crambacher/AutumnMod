@@ -20,7 +20,7 @@ public class ModBlocks {
     public static final Block RED_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRASS));
     public static final Block YELLOW_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRASS));
     public static final Block ORANGE_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRASS));
-    public static final Block LEAF_COVER = new Block(FabricBlockSettings.of(Material.CARPET).sounds(BlockSoundGroup.GRASS));
+    public static final Block LEAF_COVER = new Block(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRASS));
 
     public static final Block AUTUMN_LOG = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).sounds(BlockSoundGroup.WOOD));
     public static final Block AUTUMN_WOOD = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).sounds(BlockSoundGroup.WOOD));

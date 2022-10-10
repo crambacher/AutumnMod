@@ -42,7 +42,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:oak_sapling",
+              "name": "autumn:red_autumn_sapling",
               "conditions": [
                 {
                   "condition": "minecraft:survives_explosion"
@@ -138,6 +138,10 @@
         {
           "type": "minecraft:item",
           "name": "autumn:leaf"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:apple"
         }
       ]
     }

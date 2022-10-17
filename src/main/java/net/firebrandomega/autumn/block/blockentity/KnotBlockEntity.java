@@ -1,5 +1,5 @@
 package net.firebrandomega.autumn.block.blockentity;
-
+/*
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -31,4 +31,4 @@ public class KnotBlockEntity extends BlockEntity {
     public boolean isEmpty(){
         return owls.isEmpty();
     }
-}
+}*/

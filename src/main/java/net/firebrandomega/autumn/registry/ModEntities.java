@@ -3,10 +3,7 @@ package net.firebrandomega.autumn.registry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.firebrandomega.autumn.AutumnMod;
-import net.firebrandomega.autumn.entity.DeerEntity;
-import net.firebrandomega.autumn.entity.PageEntity;
-import net.firebrandomega.autumn.entity.RaccoonEntity;
-import net.firebrandomega.autumn.entity.SquirrelEntity;
+import net.firebrandomega.autumn.entity.*;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -20,6 +17,11 @@ public class ModEntities {
             new Identifier(AutumnMod.MOD_ID,"raccoon"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE,RaccoonEntity::new)
             .dimensions(EntityDimensions.fixed(0.4f, 0.3f)).build());
+
+    public static final EntityType<OwlEntity> OWL = Registry.register(Registry.ENTITY_TYPE,
+            new Identifier(AutumnMod.MOD_ID,"owl"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, OwlEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.4f, 0.3f)).build());
 
     public static final EntityType<SquirrelEntity> SQUIRREL = Registry.register(Registry.ENTITY_TYPE,
             new Identifier(AutumnMod.MOD_ID,"squirrel"),
@@ -42,7 +44,7 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(ModEntities.DEER, DeerEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.SQUIRREL, SquirrelEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.PAGE, PageEntity.setAttributes());
-        //FabricDefaultAttributeRegistry.register(ModEntities.);
+        FabricDefaultAttributeRegistry.register(ModEntities.OWL, OwlEntity.setAttributes());
     }
 
     public static void registerVariants(){

@@ -118,7 +118,7 @@
         "type": "autumn:deer",
         "weight": 6,
         "minCount": 1,
-        "maxCount": 3
+        "maxCount": 2
       },
       {
         "type": "autumn:raccoon",
@@ -135,6 +135,12 @@
       {
         "type": "minecraft:fox",
         "weight": 3,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "autumn:owl",
+        "weight": 6,
         "minCount": 1,
         "maxCount": 2
       }

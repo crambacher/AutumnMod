@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "autumn:block/autumn_slab"
+    },
+    "type=double": {
+      "model": "autumn:block/autumn_planks"
+    },
+    "type=top": {
+      "model": "autumn:block/autumn_slab_top"
+    }
+  }
+}

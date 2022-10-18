@@ -18,6 +18,9 @@ public class ModBlocks {
     public static final Block AUTUMN_LEAVES_ORANGE = new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque().sounds(BlockSoundGroup.AZALEA_LEAVES));
     public static final Block AUTUMN_LEAVES_YELLOW = new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque().sounds(BlockSoundGroup.AZALEA_LEAVES));
 
+    public static final Block AUTUMN_STAIRS = new StairsBlock(Blocks.OAK_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD));
+    public static final Block AUTUMN_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD));
+
     public static final Block RED_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRASS));
     public static final Block YELLOW_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRASS));
     public static final Block ORANGE_LEAFY_GRASS = new Block(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRASS));
@@ -52,6 +55,8 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "stripped_autumn_log"),STRIPPED_AUTUMN_LOG);
         Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "stripped_autumn_wood"),STRIPPED_AUTUMN_WOOD);
         Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "autumn_planks"),AUTUMN_PLANKS);
+        Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "autumn_stairs"),AUTUMN_STAIRS);
+        Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "autumn_slab"),AUTUMN_SLAB);
         //Registry.register(Registry.BLOCK, new Identifier(AutumnMod.MOD_ID, "knot_block"),KNOT_BLOCK);
     }
 
@@ -66,6 +71,8 @@ public class ModBlocks {
         instance.add(ModBlocks.AUTUMN_LEAVES_RED, 30, 60);
         instance.add(ModBlocks.AUTUMN_LEAVES_ORANGE, 30, 60);
         instance.add(ModBlocks.AUTUMN_LEAVES_YELLOW, 30, 60);
+        instance.add(ModBlocks.AUTUMN_STAIRS, 5, 20);
+        instance.add(ModBlocks.AUTUMN_SLAB, 5, 20);
         //instance.add(ModBlocks.KNOT_BLOCK, 5, 20);
     }
 

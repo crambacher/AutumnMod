@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": "autumn:stripped_autumn_wood",
+    "result": "autumn:autumn_planks",
+    "count": 4
+}

@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "#X#",
-    "###"
-  ],
   "key": {
     "#": {
-      "tag": "autumn:leaf"
+      "item": "autumn:leaf"
     },
-    "X": {
-      "tag": "minecraft:yellow_dye"
+    "I": {
+      "item": "minecraft:yellow_dye"
     }
   },
+  "pattern": [
+    "###",
+    "#I#",
+    "###"
+  ],
   "result": {
     "item": "autumn:autumn_leaves_yellow"
   }

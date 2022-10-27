@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "autumn_planks",
+  "ingredients": [
+    {
+      "item": "autumn:stripped_autumn_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "autumn:autumn_planks"
+  }
+}

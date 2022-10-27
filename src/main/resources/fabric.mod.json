@@ -23,6 +23,9 @@
     ],
     "client": [
       "net.firebrandomega.autumn.AutumnModClient"
+    ],
+    "fabric-datagen": [
+      "net.firebrandomega.autumn.datagen.ModDataGeneration"
     ]
   },
   "mixins": [

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "autumn:leaf"
+    },
+    "I": {
+      "item": "minecraft:elytra"
+    }
+  },
+  "pattern": [
+    "###",
+    "#I#",
+    "###"
+  ],
+  "result": {
+    "item": "autumn:autumn_wings"
+  }
+}

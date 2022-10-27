@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "autumn:leaf"
+    },
+    "G": {
+      "item": "minecraft:grass"
+    },
+    "I": {
+      "item": "minecraft:yellow_dye"
+    }
+  },
+  "pattern": [
+    "G#G",
+    "#I#",
+    "G#G"
+  ],
+  "result": {
+    "item": "autumn:yellow_leafy_grass"
+  }
+}

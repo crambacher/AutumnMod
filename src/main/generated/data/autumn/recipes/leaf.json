@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "autumn:leaf_cover"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "autumn:leaf"
+  }
+}

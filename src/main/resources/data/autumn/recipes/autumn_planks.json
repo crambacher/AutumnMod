@@ -1,6 +1,0 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": "autumn:autumn_log",
-    "result": "autumn:autumn_planks",
-    "count": 4
-}
